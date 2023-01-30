@@ -1,0 +1,181 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #432818;
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/*imagem*/
+
+div#imagem{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0%;
+    height: 100vh;
+    width: 50vw;
+    background-image: url(imagens/pexels-pew-nguyen-244133.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div#imagem > ul#lista{
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+div#imagem > ul#lista > a{
+    position: relative;
+}
+
+div#imagem > ul#lista > a::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.5s ease-in-out;
+    visibility: hidden;
+    transform: scaleX(0);
+}
+
+div#imagem > ul#lista > a:hover::before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+ul > li{
+    list-style: none;
+}
+
+div#imagem > ul#lista > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Login*/
+main{
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main > div#login{
+    width: 565px;
+    height: 600px;
+    background-color: #99582A;
+    border-radius: 20px;
+}
+
+div#login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div#login > img{
+    margin-top: -50px;
+}
+
+div#login > h1{
+    font-weight: 300;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+div#login > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div#login > form > label.dados{
+    color: white;
+    font-size: 32px;
+    margin-right: 350px;
+}
+
+div#login > form > input.entrada-dados{
+    width: 510px;
+    height: 46px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+    margin-top: 5px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+div#dados-senha{
+    margin-top: 5px;
+    width: 493px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: light;
+}
+
+div#login > form > a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-decoration: underline;
+}
+div#login > form > div#dados-senha > p > label{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+div#login > form > div#dados-senha > a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+div#login > form > div#dados-senha > a:hover{
+    text-decoration: underline;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+div#login > form > input#btn{
+    color: black;
+    background-color: white;
+    border: none;
+    width: 124px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: light;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+div#login > form > input#btn:hover{
+    background-color: #432818;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    color: white;
+    cursor: pointer;
+}
