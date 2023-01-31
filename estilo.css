@@ -13,6 +13,15 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
+/*Animação*/
+
+@keyframes slide {
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /*imagem*/
 
 div#imagem{
@@ -28,7 +37,7 @@ div#imagem{
     background-size: cover;
 }
 
-div#imagem > ul#lista{
+div#imagem > footer#pe > ul#lista{
     color: white;
     font-size: 24px;
     display: flex;
@@ -37,11 +46,11 @@ div#imagem > ul#lista{
     position: relative;
 }
 
-div#imagem > ul#lista > a{
+div#imagem > footer#pe > ul#lista > a{
     position: relative;
 }
 
-div#imagem > ul#lista > a::before{
+/*div#imagem >  footer#pe > ul#lista > a::before{
     content: " ";
     position: absolute;
     width: 100%;
@@ -54,18 +63,22 @@ div#imagem > ul#lista > a::before{
     transform: scaleX(0);
 }
 
-div#imagem > ul#lista > a:hover::before{
+div#imagem > footer#pe > ul#lista > a:hover::before{
     visibility: visible;
     transform: scaleX(1);
-}
+}*/
 
 ul > li{
     list-style: none;
 }
 
-div#imagem > ul#lista > li > a{
+div#imagem > footer#pe > ul#lista > li > a{
     text-decoration: none;
     color: white;
+}
+
+div#imagem > footer#pe > ul#lista > li > a:hover{
+    text-decoration: underline;
 }
 
 /*Login*/
@@ -77,10 +90,15 @@ main{
 }
 
 main > div#login{
-    width: 565px;
+    width: 600px;
     height: 600px;
     background-color: #99582A;
+    border: 0.5px solid #ffffff;
     border-radius: 20px;
+    opacity: 0;
+    animation: slide 0.5s forwards;
+    transform: translateX(200px);
+    animation-timing-function: ease;
 }
 
 div#login{
@@ -111,11 +129,11 @@ div#login > form{
 div#login > form > label.dados{
     color: white;
     font-size: 32px;
-    margin-right: 350px;
+    margin-right: 330px;
 }
 
 div#login > form > input.entrada-dados{
-    width: 510px;
+    width: 450px;
     height: 46px;
     border-radius: 50px;
     border: none;
@@ -123,10 +141,11 @@ div#login > form > input.entrada-dados{
     margin-top: 5px;
     padding-left: 20px;
     font-size: 16px;
+    animation: slide 0.3s forwards;;
 }
 div#dados-senha{
     margin-top: 5px;
-    width: 493px;
+    width: 440px;
     display: flex;
     justify-content: space-between;
     color: white;
@@ -178,4 +197,34 @@ div#login > form > input#btn:hover{
     transition: all 0.3s ease-in-out;
     color: white;
     cursor: pointer;
+}
+/*Rodapé*/
+
+
+
+/*Responsividade*/
+
+@media (max-width: 1140px){
+    body{
+        background-image: url(imagens/pexels-pew-nguyen-244133.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+    }
+    main{
+        margin: 0px;
+    }
+    div#imagem{
+        display: none;
+    }
+    div#imagem > footer#pe{
+        display: block;
+    }
+    main > div#login{
+        position: relative;
+        left: 40px;
+        border: 0.5px solid #ffffff;
+    }
 }

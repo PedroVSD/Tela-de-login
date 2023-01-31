@@ -9,22 +9,24 @@
 </head>
 <body>
     <div id="imagem">
-        <ul id="lista">
-            <li><a href="#">Ajuda</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Termos</a></li>
-            <li><a href="#">Privacidade</a></li>
-        </ul>
+        <footer id="pe">
+            <ul id="lista">
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Termos</a></li>
+                <li><a href="#">Privacidade</a></li>
+            </ul>
+        </footer>
     </div>
     <main>
         <div id="login">
             <img src="imagens/logo-branco-semfundo.png" alt="logo">
             <H1>Bem vindo de Volta!!</H1>
-            <form method="post" action="login.php">
+            <form method="post">
                 <label for="email" class="dados">E-mail:</label>
-                <input type="email" class="entrada-dados" name="email" placeholder="email@exemplo.com">
+                <input type="email" class="entrada-dados" name="email" placeholder="email@exemplo.com" required minlength="8" required>
                 <label for="senha" class="dados" style="margin-top: 30px;">Senha:</label>
-                <input type="password" class="entrada-dados" name="senha" placeholder="Sua senha" required minlength="8">               
+                <input type="password" class="entrada-dados" name="senha" placeholder="Sua senha" required minlength="8" required>               
                 <div id="dados-senha">
                     <p><input type="checkbox" id="lembrar" name="lembrar"><label for="lembrar"> Se Lembrar?</label></p>
                     <a href="#">Esqueci a Senha</a>
@@ -33,6 +35,6 @@
                 <a href="#">Criar Conta</a>
             </form>
         </div>
-    </main>
+    </main>  
 </body>
 </html>
