@@ -145,7 +145,7 @@ div#login > form > label.dados{
 
 div#login > form > input.entrada-dados{
     width: 350px;
-    height: 46px;
+    height: 35px;
     border-radius: 0px;
     border-bottom: 1px solid var(--cor01);
     background-color: #ffffff00;
@@ -252,14 +252,14 @@ div#login > form > input#btn:hover{
         border: 1px solid var(--cor01);
     }
     main > footer#lista{
-        display: inline-block;
+        display: flex;
         position: relative;
-        right: 10px;
+        left: 30px;
         width: 400px;
     }
     main > footer#lista > ul{
         display: flex;
-        width: 500px;
+        width: 400px;
         justify-content: space-evenly;
     }
     main > footer#lista > ul > li > a{
@@ -268,5 +268,66 @@ div#login > form > input#btn:hover{
     }
     main > footer#lista > ul > li > a:hover{
         text-decoration: underline;
+    }
+}
+
+@media (max-width:480px) {
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    main > div#login{
+        width: 280px;
+        height: 280px;
+    }
+    div#login > img{
+        margin-top: 3px;
+    }
+    
+    div#login > h1{
+        font-weight: 300;
+        font-size: 16px;
+    }
+    
+    div#login > form > label.dados{
+        font-size: 10px;
+        margin-right: 210px;
+    }
+    
+    div#login > form > input.entrada-dados{
+        width: 250px;
+        height: 35px;
+        font-size: 12px;
+        margin-top: 3px;
+    }
+    div#dados-senha{
+        margin-top: 5px;
+        width: 280px;
+        font-weight: light;
+        padding-left: 18px;
+        padding-right: 18px;
+        align-items: baseline;
+        padding-bottom: 3px;
+    }
+    div#login > form > div#dados-senha > a{
+        font-size: 10px;
+    }
+    
+    div#login > form > a{
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+    div#login > form > div#dados-senha > p > label{
+        font-size: 10px;
+    }
+    div#login > form > input#btn{
+        width: 100px;
+        height: 30px;
+    }
+    main > footer#lista{
+        width: 280px;
+        font-size: 12.5px;
+        display: flex;
+        left: 38px;
     }
 }
