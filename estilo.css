@@ -299,6 +299,10 @@ div#login > form > input#btn:hover{
         height: 35px;
         font-size: 12px;
         margin-top: 3px;
+        font-family: 'Quicksand', sans-serif;
+    }
+    div#login > form > input.entrada-dados:focus-visible{
+        background-color: var(--cor03);
     }
     div#dados-senha{
         margin-top: 5px;
