@@ -5,7 +5,7 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: auto;
 }
 :root{
     --cor01: #99582A;
@@ -141,23 +141,51 @@ div#login > form > label.dados{
     color: var(--cor01);
     font-size: 15px;
     margin-right: 270px;
+    position: relative;
 }
 
 div#login > form > input.entrada-dados{
-    width: 350px;
+    width: 100%;
     height: 35px;
-    border-radius: 0px;
-    border-bottom: 1px solid var(--cor01);
+    border-bottom: none;
     background-color: #ffffff00;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
     /* box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);*/
     margin-top: 5px;
     padding-left: 20px;
     font-size: 16px;
-    animation: slide 0.3s forwards;;
+    animation: slide 0.3s forwards;
+    outline: none;
+    position: relative;
 }
+div#login > form > input.entrada-dados:focus{
+    border-bottom: 1px solid var(--cor01); 
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px var(--cor03) inset !important;
+  -webkit-text-fill-color: var(--cor04) !important;
+}
+
+/*div#login > form > input.entrada-dados::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--cor01);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+div#login > form > input.entrada-dados:hover::before{
+    visibility: visible;
+    transform: scaleX(1);
+}*/
 div#dados-senha{
     margin-top: 5px;
     width: 350px;
