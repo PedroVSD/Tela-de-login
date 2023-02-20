@@ -100,8 +100,8 @@ main > footer#lista{
 }
 
 main > div#login{
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     background-color: var(--cor03);
     border: 0.5px solid var(--cor01);
     border-radius: 20px;
@@ -113,10 +113,6 @@ main > div#login{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-div#login > img{
-    margin-top: 0px;
 }
 
 div#login > h1{
@@ -132,35 +128,106 @@ div#login > form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: auto;
+    height: auto;
+    overflow: hidden;
 }
 
 div#login > form > label.dados{
     color: var(--cor01);
-    font-size: 15px;
+    font-size: 20px;
     margin-right: 270px;
     position: relative;
+    bottom: 2px;
+    left: -50px;
 }
 
 div#login > form > input.entrada-dados{
-    width: 100%;
-    height: 35px;
-    border-bottom: none;
+    width: 442px;
     background: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    /* box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);*/
+    border: none;
+    border-bottom: 1px solid var(--cor01);
     margin-top: 5px;
-    padding-left: 20px;
+    margin-bottom: 10px;
     font-size: 16px;
     animation: slide 0.3s forwards;
-    outline: none;
     position: relative;
 }
+
 div#login > form > input.entrada-dados:focus{
-    border-bottom: 1px solid var(--cor01); 
+    outline: none;
+    color: var(--cor01);
+}
+/*fom*/
+div#senha-nome{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 155px;
+    font-size: 20px;
+    color: var(--cor01);
 }
 
+div#senha-nome > p#senha-p > label.dados{
+    position: relative;
+    left: 39px;
+}
+
+div#senha-nome > p#senha-p > input.senha{
+    position: relative;
+    width: 200px;
+    left: 30px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--cor01);
+    color: var(--cor01);
+}
+
+div#senha-nome > p#senha-p > input.senha:focus{
+    color: var(--cor01);
+}
+
+div#senha-nome > p#senha-p-c > input.senha{
+    width: 200px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--cor01);
+    color: var(--cor01);
+}
+
+div#senha-nome > p#nome-p > label.dados{
+    position: relative;
+    left: 39px;
+}
+
+div#senha-nome > p#nome-p > input.nome{
+    position: relative;
+    width: 200px;
+    left: 30px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--cor01);
+    color: var(--cor01);
+}
+
+div#senha-nome > p#nome-p > input.nome:focus{
+    color: var(--cor01);
+}
+
+div#senha-nome > p#nome-p-c > input.nome{
+    position: relative;
+    width: 200px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--cor01); 
+    color: var(--cor01);
+}
+/*fim form*/
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
@@ -179,43 +246,11 @@ select:-webkit-autofill {
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
-}
+}*/
+
 div#login > form > input.entrada-dados:hover::before{
     visibility: visible;
     transform: scaleX(1);
-}*/
-div#dados-senha{
-    margin-top: 5px;
-    width: 350px;
-    display: flex;
-    justify-content: space-between;
-    color: var(--cor01);
-    font-weight: light;
-}
-
-div#login > form > a{
-    text-decoration: none;
-    color: var(--cor01);
-    font-size: 20px;
-    text-decoration: underline;
-}
-div#login > form > div#dados-senha > p > label{
-    text-decoration: none;
-    color: var(--cor01);
-    font-size: 15px;
-}
-
-div#login > form > div#dados-senha > a{
-    text-decoration: none;
-    color: var(--cor01);
-    font-size: 15px;
-    transition: all 0.3s ease-in-out;
-}
-
-div#login > form > div#dados-senha > a:hover{
-    text-decoration: underline;
-    color: var(--cor01);
-    transition: all 0.3s ease-in-out;
 }
 
 div#login > form > input#btn{
@@ -229,8 +264,9 @@ div#login > form > input#btn{
     font-size: 16px;
     font-family: 'Quicksand', sans-serif;
     font-weight: light;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 30px;
+    position: relative;
+    bottom: 10px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -241,6 +277,11 @@ div#login > form > input#btn:hover{
     color: white;
     cursor: pointer;
 }
+
+div#login label a{
+    color: var(--cor04);
+}
+
 /*Rodapé*/
 
 
@@ -277,6 +318,47 @@ div#login > form > input#btn:hover{
         left: 40px;
         border: 1px solid var(--cor01);
     }
+    /*form*/
+    div#login > form > label.dados{
+        position: relative;
+        top: 10px;
+    }
+    div#login > form > input.entrada-dados{
+        width: 420px;
+        position: relative;
+        top: 5px;
+    }
+    div#senha-nome{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr; 
+        height: 210px;
+    } 
+    div#senha-nome > p#senha-p{
+        overflow: hidden;
+    }
+    div#senha-nome > p#senha-p > input.senha{
+        width: 100%;
+    }
+    div#senha-nome > p#senha-p-c{
+        overflow: hidden;
+    }
+    div#senha-nome > p#senha-p-c > input.senha{
+        width: 100%;
+    }
+    div#senha-nome > p#nome-p{
+        overflow: hidden;
+    }
+    div#senha-nome > p#nome-p > input.nome{
+        width: 100%;  
+    }
+    div#senha-nome > p#nome-p-c{
+        overflow: hidden;
+    }
+    div#senha-nome > p#nome-p-c > input.nome{
+        width: 100%;
+    }
+    /*fim form*/  
     main > footer#lista{
         display: flex;
         position: relative;
