@@ -331,7 +331,7 @@ div#login label a{
     div#senha-nome{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr; 
+        grid-template-rows: repeat(4, 1fr); 
         height: 210px;
     } 
     div#senha-nome > p#senha-p{
